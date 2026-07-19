@@ -1,6 +1,4 @@
-
 project(HelloHuiyu)
-
 
 add_executable(${PROJECT_NAME})
 
