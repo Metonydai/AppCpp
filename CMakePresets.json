@@ -4,7 +4,7 @@
     {
       "name": "vcpkg",
       "binaryDir": "${sourceDir}/build",
-      "generator": "Visual Studio 18 2026",
+      "generator": "Unix Makefiles",
       "cacheVariables": {
         "CMAKE_TOOLCHAIN_FILE": "third_party/vcpkg/scripts/buildsystems/vcpkg.cmake"
       }

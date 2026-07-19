@@ -2,9 +2,6 @@ project(QnnEyegaze)
 
 add_executable(${PROJECT_NAME})
 
-find_package(fmt CONFIG REQUIRED)
-find_package(OpenCV CONFIG REQUIRED)
-
 file(GLOB SOURCE_FILES 
     "src/*.c"
     "src/*.cpp"
@@ -16,4 +13,7 @@ target_sources(${PROJECT_NAME}
     ${SOURCE_FILES}
 )
 
-target_link_libraries(${PROJECT_NAME} PRIVATE fmt::fmt ${OpenCV_LIBS})
+target_include_directories(${PROJECT_NAME} PRIVATE 
+    ${OpenCV_INCLUDE_DIRS}
+)
+target_link_libraries(${PROJECT_NAME} PRIVATE fmt::fmt opencv_core opencv_imgproc opencv_highgui)

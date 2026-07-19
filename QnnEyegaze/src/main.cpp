@@ -1,6 +1,11 @@
-#include <opencv2/opencv.hpp>
 #include <fmt/core.h>
-#include <iostream>
+#include <vector>
+#include <string>
+#include <memory>
+#include <dlfcn.h> 
+
+#include <opencv2/opencv.hpp>
+
 
 int main() {
     // 1. 開啟 USB 相機
