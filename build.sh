@@ -26,6 +26,6 @@ echo "[INFO] Running CMake..."
 cmake -B build -S .
 
 # 執行編譯階段
-cmake --build build --config "${BUILD_TYPE}"
+cmake --build build --config "${BUILD_TYPE}" -j$(nproc)
 
 echo "[INFO] Done."

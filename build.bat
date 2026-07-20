@@ -22,7 +22,7 @@ echo [INFO] Running CMake...
 
 :: 透過 -DCMAKE_BUILD_TYPE 帶入 Debug 或 Release 參數
 cmake -B build -S .
-cmake --build build --config %BUILD_TYPE%
+cmake --build build --config %BUILD_TYPE% -j$(nproc)
 
 ENDLOCAL
 echo [INFO] Done.

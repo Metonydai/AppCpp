@@ -16,6 +16,6 @@ echo "[INFO] Running CMake..."
 cmake -B build-arm64 -DCMAKE_TOOLCHAIN_FILE=toolchain-arm64.cmake
 
 # 執行編譯階段
-cmake --build build-arm64 --config "${BUILD_TYPE}"
+cmake --build build-arm64 --config "${BUILD_TYPE}" -j$(nproc)
 
 echo "[INFO] Done."
