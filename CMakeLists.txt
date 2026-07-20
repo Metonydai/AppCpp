@@ -4,9 +4,11 @@ project(AppCpp)
 set(CMAKE_CXX_STANDARD 17)
 
 include(FetchContent)
+set(CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH OFF)
+set(CMAKE_IGNORE_PATH "/mnt/c" "/mnt/d")
 
 # 1. 嘗試尋找系統或 apt 已經安裝的 OpenCV
-find_package(OpenCV 4.0 QUIET)
+find_package(OpenCV 4.0 QUIET NO_CMAKE_SYSTEM_PATH)
 
 # 2. 如果系統找不到，則透過 FetchContent 從 GitHub 下載
 if(NOT OpenCV_FOUND)
